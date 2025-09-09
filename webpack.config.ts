@@ -33,10 +33,16 @@ const config: Configuration = {
 
 	externals: {
 		react: {
-			root: 'react',
+			root: 'React',
 			commonjs: 'react',
 			commonjs2: 'react',
 			amd: 'react',
+		},
+		'react/jsx-runtime': {
+			root: 'React',
+			commonjs: 'react/jsx-runtime',
+			commonjs2: 'react/jsx-runtime',
+			amd: 'react/jsx-runtime'
 		}
 	}
 };
