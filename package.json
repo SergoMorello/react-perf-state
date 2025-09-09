@@ -24,10 +24,21 @@
     "url": "git+https://github.com/SergoMorello/react-perf-state.git"
   },
   "keywords": [
-    "api",
-    "laravel",
-    "cache",
-    "events"
+    "react",
+	"hooks",
+	"state",
+	"performance",
+	"raf",
+	"requestAnimationFrame",
+	"useState",
+	"useQueueState",
+	"batching",
+	"throttle",
+	"coalesce",
+	"react-native",
+	"optimization",
+	"rendering",
+	"fast"
   ],
   "author": "Sergei Serov",
   "license": "MIT",
