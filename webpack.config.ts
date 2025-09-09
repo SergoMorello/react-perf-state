@@ -29,6 +29,15 @@ const config: Configuration = {
 		library: 'PerfState',
 		libraryTarget: 'umd',
 		auxiliaryComment: 'Performance states with queues for React'
+	},
+
+	externals: {
+		react: {
+			root: 'react',
+			commonjs: 'react',
+			commonjs2: 'react',
+			amd: 'react',
+		}
 	}
 };
 

@@ -4,4 +4,8 @@ const PerfState = {
 	useQueueState
 };
 
+export {
+	useQueueState
+};
+
 export default PerfState;

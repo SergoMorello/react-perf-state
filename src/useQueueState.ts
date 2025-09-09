@@ -19,7 +19,7 @@ function processStateQueue() {
 	rafId = null;
 }
 
-export function useQueueState<T>(initialValue: T | (() => T)): [T, React.Dispatch<React.SetStateAction<T>>] {
+export const useQueueState = <T>(initialValue: T | (() => T)): [T, React.Dispatch<React.SetStateAction<T>>] => {
 	const [state, setState] = useOriginalState<T>(initialValue);
 	const stateRef = useRef<T>(state);
 
