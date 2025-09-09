@@ -3,7 +3,7 @@ import path from 'path';
 
 const config: Configuration = {
 	entry: {
-		index: '/src/index.ts',
+		index: './src/index.ts',
 	},
 	target: 'web',
 	mode: 'production',
@@ -33,10 +33,16 @@ const config: Configuration = {
 
 	externals: {
 		react: {
-			root: 'react',
+			root: 'React',
 			commonjs: 'react',
 			commonjs2: 'react',
 			amd: 'react',
+		},
+		'react/jsx-runtime': {
+			root: 'React',
+			commonjs: 'react/jsx-runtime',
+			commonjs2: 'react/jsx-runtime',
+			amd: 'react/jsx-runtime'
 		}
 	}
 };

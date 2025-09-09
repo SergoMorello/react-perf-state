@@ -1,8 +1,10 @@
 import {
 	useRef,
 	useState as useOriginalState,
-	useEffect
+	useEffect,
+	useContext
 } from 'react';
+import QueueStateContext from './QueueStateContext';
 
 const rafStateQueue = new Map<React.Dispatch<React.SetStateAction<any>>, ((current: any) => any)[]>(); // Очередь состояний для всех экземпляров
 let rafId: number | null = null;
@@ -20,7 +22,8 @@ function processStateQueue() {
 }
 
 export const useQueueState = <T>(initialValue: T | (() => T)): [T, React.Dispatch<React.SetStateAction<T>>] => {
-	const [state, setState] = useOriginalState<T>(initialValue);
+	const ctx = useContext(QueueStateContext);
+	const [state, setState] = ctx === undefined ? useOriginalState<T>(initialValue) : ctx.useState<T>(initialValue);
 	const stateRef = useRef<T>(state);
 
 	useEffect(() => {

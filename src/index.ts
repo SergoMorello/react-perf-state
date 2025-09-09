@@ -1,11 +1,14 @@
-import {useQueueState} from "./useQueueState";
+import { useQueueState } from "./useQueueState";
+import { QueueStateContainer } from "./QueueStateContainer";
 
 const PerfState = {
-	useQueueState
+	useQueueState,
+	QueueStateContainer
 };
 
 export {
-	useQueueState
+	useQueueState,
+	QueueStateContainer
 };
 
 export default PerfState;
